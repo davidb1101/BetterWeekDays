@@ -7,6 +7,10 @@ import { MonthViewComponent } from './calendar-views/month/month-view/month-view
 
 const routes: Routes = [
   {
+    path: "",
+    component: DayViewComponent,
+  },
+  {
     path: "day-view",
     component: DayViewComponent,
   },
