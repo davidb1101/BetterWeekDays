@@ -1,1 +1,11 @@
-<p>week-view works!</p>
+<div style="width: 100%;text-align: center;">
+
+    <div *ngFor="let weekday of weekDayList" style="display: inline-block; width: 10%; margin: 0px; padding: 0px; border: 1px solid black;">
+        <div style="width: 100%; height: 20px; margin:0px; padding: 10px 0px 0px 0px; border-bottom: 1px solid black;">
+            {{weekday.dayName}}
+        </div>
+        <div style="width: 100%; height: 100px;">
+        </div>
+    </div>
+
+</div>
