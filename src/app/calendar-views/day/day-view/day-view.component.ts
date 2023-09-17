@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomDayName } from '../../../models/custom-day-names'
+import { MonthName } from '../../../models/month-names'
 
 @Component({
   selector: 'app-day-view',
@@ -7,7 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DayViewComponent implements OnInit {
 
-  constructor() { }
+  public currentDate: Date = new Date();
+  public dayOfWeek: number;
+  public dayName: string;
+  public monthName: string;
+  public dayNumber: number;
+
+  constructor() { 
+
+    
+    this.dayOfWeek = this.currentDate.getDay();
+    this.monthName = MonthName[this.currentDate.getMonth()];
+    this.dayName = CustomDayName[this.dayOfWeek];
+
+    this.dayNumber = this.currentDate.getDate();
+
+
+
+  }
 
   ngOnInit(): void {
   }
